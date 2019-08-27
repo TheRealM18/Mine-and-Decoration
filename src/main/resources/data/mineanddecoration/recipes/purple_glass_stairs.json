@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "XX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:purple_stained_glass"
+    }
+  },
+  "result": {
+    "item": "mineanddecoration:purple_glass_stairs"
+  }
+}

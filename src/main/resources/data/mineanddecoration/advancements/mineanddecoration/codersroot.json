@@ -1,0 +1,25 @@
+{
+	"parent": "mineanddecoration:mineanddecoration/root",
+	
+    "display": {
+        "icon": {
+            "item": "mineanddecoration:red_glass_stairs"
+        },
+        "title": {
+            "translate": "mineanddecoration.advancement.title.codersroot"
+        },
+        "description": {
+            "translate": "mineanddecoration.advancement.desc.codersroot"
+        },
+        "show_toast": true,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+            }
+    },
+    "requirements": [
+        ["tick"]
+    ]
+}

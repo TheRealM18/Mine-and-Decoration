@@ -1,0 +1,27 @@
+modLoader="javafml" #mandatory
+loaderVersion="[28,]" #mandatory (26 is current forge version)
+issueTrackerURL="https://github.com/TheRealM18/Mine-And-Slash---Expansion/issues" #optional
+[[mods]] #mandatory
+modId="mineanddecoration" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="Mine & Slash Expansion" #mandatory
+updateJSONURL="http://myurl.me/" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/mine-and-slash-expansion" #optional
+logoFile="examplemod.png" #optional
+credits="My team for a great ideas" #optional
+authors="TheRealM18" #optional
+description='''
+"Decoration Style of Mine and Slash mod.
+'''
+[[dependencies.mineanddecoration]]
+    modId="forge"
+    mandatory=true
+    versionRange="[28.0.45,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.mineanddecoration]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"

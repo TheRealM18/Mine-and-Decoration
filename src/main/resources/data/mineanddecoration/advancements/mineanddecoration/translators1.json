@@ -1,0 +1,25 @@
+{
+	"parent": "mineanddecoration:mineanddecoration/translatorsroot",
+	
+    "display": {
+        "icon": {
+            "item": "mineanddecoration:white_glass_stairs"
+        },
+        "title": {
+            "translate": "mineanddecoration.advancement.title.translators1"
+        },
+        "description": {
+            "translate": "mineanddecoration.advancement.desc.translators1"
+        },
+        "show_toast": true,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+            }
+    },
+    "requirements": [
+        ["tick"]
+    ]
+}

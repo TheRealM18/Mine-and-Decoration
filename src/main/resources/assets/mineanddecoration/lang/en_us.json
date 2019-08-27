@@ -1,0 +1,24 @@
+{
+
+	
+	
+	"mineanddecoration.advancement.title.welcomeeveryone": "Mine and Decoration - Information",
+	"mineanddecoration.advancement.title.version": "Mod Version",
+	"mineanddecoration.advancement.title.codersroot": "Coders",
+	"mineanddecoration.advancement.title.coder1": "Coder",
+	"mineanddecoration.advancement.title.translatorsroot": "Translators",
+	"mineanddecoration.advancement.title.translators1": "Translator",
+	"mineanddecoration.advancement.title.support": "Discord For help",
+	
+	
+	"mineanddecoration.advancement.desc.welcomeeveryone": "Welcome Mine and Slash - Expansion",
+	"mineanddecoration.advancement.desc.version": "1.0.1.1",
+	"mineanddecoration.advancement.desc.codersroot": "This are the developers of the mod",
+	"mineanddecoration.advancement.desc.coder1": "TheRealM18",
+	"mineanddecoration.advancement.desc.translatorsroot": "This are the translators of the mod",
+	"mineanddecoration.advancement.desc.translators1": "yuwanjun564",
+	"mineanddecoration.advancement.desc.support": "YSYMcMb",
+	
+	
+	"itemGroup.mineanddecoration_deco": "Mine and Decoration Stairs"
+}
