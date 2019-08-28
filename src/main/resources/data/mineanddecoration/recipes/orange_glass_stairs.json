@@ -1,16 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
   "pattern": [
-    "X",
-    "XX",
-    "XXX"
+    "#  ",
+    "## ",
+    "###"
   ],
   "key": {
-    "X": {
+    "#": {
       "item": "minecraft:orange_stained_glass"
     }
   },
   "result": {
-    "item": "mineanddecoration:orange_glass_stairs"
+    "item": "mineanddecoration:orange_glass_stairs",
+    "count": 4
   }
 }
