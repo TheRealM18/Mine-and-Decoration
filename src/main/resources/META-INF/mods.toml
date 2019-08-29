@@ -4,7 +4,7 @@ issueTrackerURL="https://github.com/TheRealM18/Mine-And-Slash---Expansion/issues
 [[mods]] #mandatory
 modId="mineanddecoration" #mandatory
 version="${file.jarVersion}" #mandatory
-displayName="Mine & Slash Expansion" #mandatory
+displayName="Mine & Decoration" #mandatory
 updateJSONURL="http://myurl.me/" #optional
 displayURL="https://www.curseforge.com/minecraft/mc-mods/mine-and-slash-expansion" #optional
 logoFile="examplemod.png" #optional

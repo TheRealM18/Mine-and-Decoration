@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "mineanddecoration:block/purple_glazed_terracotta_slabs" },
+        "type=top": { "model": "mineanddecoration:block/purple_glazed_terracotta_slabs_top" },
+        "type=double": { "model": "mineanddecoration:block/purple_glazed_terracotta" }
+    }
+}

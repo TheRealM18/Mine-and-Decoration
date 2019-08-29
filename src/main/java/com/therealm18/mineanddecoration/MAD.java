@@ -36,11 +36,20 @@ public class MAD
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
     
-    public static final ItemGroup DECORATION = new ItemGroup(Ref.MODID + "_deco") {
+    public static final ItemGroup STAIRS = new ItemGroup(Ref.MODID + "_stairs") {
 
         @Override
         public ItemStack createIcon() {
             return new ItemStack(BlockReferance.BLOCK_GLASS_STAIRS);
+        }
+
+    };
+    
+    public static final ItemGroup SLABS = new ItemGroup(Ref.MODID + "_slabs") {
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(BlockReferance.BLOCK_GLASS_SLABS);
         }
 
     };
@@ -89,63 +98,119 @@ public class MAD
     		//Stairs
     		
     		//Glass
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_wHITE_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.wHITE_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.ORANGE_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.MAGENTA_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIGHT_BLUE_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.YELLOW_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIME_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.PINK_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.GRAY_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIGHT_GRAY_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.CYAN_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.PURPLE_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BLUE_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BROWN_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.GREEN_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.RED_GLASS_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_GLASS_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BLACK_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_WHITE_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.WHITE_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.ORANGE_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.MAGENTA_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIGHT_BLUE_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.YELLOW_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIME_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.PINK_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.GRAY_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIGHT_GRAY_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.CYAN_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.PURPLE_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BLUE_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BROWN_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.GREEN_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.RED_GLASS_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_GLASS_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BLACK_GLASS_STAIRS));
     		
     		//Terracotta
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_wHITE_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.wHITE_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.ORANGE_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.MAGENTA_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIGHT_BLUE_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.YELLOW_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIME_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.PINK_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.GRAY_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIGHT_GRAY_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.CYAN_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.PURPLE_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BLUE_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BROWN_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.GREEN_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.RED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BLACK_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_WHITE_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.WHITE_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.ORANGE_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.MAGENTA_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIGHT_BLUE_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.YELLOW_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIME_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.PINK_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.GRAY_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIGHT_GRAY_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.CYAN_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.PURPLE_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BLUE_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BROWN_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.GREEN_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.RED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BLACK_TERRACOTTA_STAIRS));
     		
     		//Glazed Terracotta
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_wHITE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.wHITE_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.ORANGE_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.MAGENTA_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIGHT_BLUE_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.YELLOW_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIME_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.PINK_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.GRAY_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.LIGHT_GRAY_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.CYAN_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.PURPLE_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BLUE_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BROWN_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.GREEN_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.RED_GLAZED_TERRACOTTA_STAIRS));
-    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.BLACK_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_WHITE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.WHITE_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.ORANGE_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.MAGENTA_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIGHT_BLUE_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.YELLOW_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIME_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.PINK_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.GRAY_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.LIGHT_GRAY_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.CYAN_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.PURPLE_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BLUE_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BROWN_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.GREEN_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.RED_GLAZED_TERRACOTTA_STAIRS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_GLAZED_TERRACOTTA_STAIRS, new Item.Properties().group(STAIRS)).setRegistryName(BlockReferance.BLACK_GLAZED_TERRACOTTA_STAIRS));
+     		
     		
-//    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GLASS_SLAB, new Item.Properties().group(DECORATION)).setRegistryName(BlockReferance.GLASS_SLAB));
-
+    		//Slabs
+    		
+    		//Glass
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_WHITE_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.WHITE_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.ORANGE_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.MAGENTA_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIGHT_BLUE_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.YELLOW_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIME_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.PINK_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.GRAY_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIGHT_GRAY_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.CYAN_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.PURPLE_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BLUE_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BROWN_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.GREEN_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.RED_GLASS_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_GLASS_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BLACK_GLASS_SLABS));
+    		
+    		//Terracotta
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_WHITE_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.WHITE_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.ORANGE_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.MAGENTA_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIGHT_BLUE_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.YELLOW_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIME_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.PINK_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.GRAY_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIGHT_GRAY_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.CYAN_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.PURPLE_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BLUE_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BROWN_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.GREEN_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.RED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BLACK_TERRACOTTA_SLABS));
+    		
+    		//Glazed Terracotta
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_WHITE_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.WHITE_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_ORANGE_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.ORANGE_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_MAGENTA_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.MAGENTA_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_BLUE_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIGHT_BLUE_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_YELLOW_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.YELLOW_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIME_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIME_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PINK_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.PINK_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GRAY_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.GRAY_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_LIGHT_GRAY_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.LIGHT_GRAY_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_CYAN_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.CYAN_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_PURPLE_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.PURPLE_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLUE_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BLUE_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BROWN_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BROWN_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.GREEN_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.RED_GLAZED_TERRACOTTA_SLABS));
+    		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BLACK_GLAZED_TERRACOTTA_SLABS));
     	}
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
@@ -207,7 +272,66 @@ public class MAD
         	event.getRegistry().register(new Stairs(Blocks.TERRACOTTA.getDefaultState(), Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE)).setRegistryName("green_glazed_terracotta_stairs"));
         	event.getRegistry().register(new Stairs(Blocks.TERRACOTTA.getDefaultState(), Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE)).setRegistryName("red_glazed_terracotta_stairs"));
         	event.getRegistry().register(new Stairs(Blocks.TERRACOTTA.getDefaultState(), Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE)).setRegistryName("black_glazed_terracotta_stairs"));
-//        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS)).setRegistryName("glass_slab"));
+
+
+        	//Slabs
+        	
+        	//Glass
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("white_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("orange_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("magenta_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("light_blue_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("yellow_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("lime_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("pink_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("gray_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("light_gray_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("cyan_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("purple_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("blue_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("brown_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("green_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("red_glass_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.GLASS).hardnessAndResistance(5F)).setRegistryName("black_glass_slabs"));
+        	
+        	//Terracotta
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("white_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("orange_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("magenta_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("light_blue_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("yellow_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("lime_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("pink_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("gray_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("light_gray_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("cyan_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("purple_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("blue_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("brown_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("green_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("red_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("black_terracotta_slabs"));
+        	
+        	//Glazed Terracotta
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("white_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("orange_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("magenta_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("light_blue_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("yellow_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("lime_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("pink_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("gray_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("light_gray_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("cyan_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("purple_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("blue_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("brown_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("green_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("red_glazed_terracotta_slabs"));
+        	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("black_glazed_terracotta_slabs"));
+
         }
     }
 }

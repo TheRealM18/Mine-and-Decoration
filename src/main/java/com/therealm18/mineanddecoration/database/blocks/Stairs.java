@@ -2,6 +2,7 @@ package com.therealm18.mineanddecoration.database.blocks;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.item.Item;
 
 public class Stairs extends StairsBlock {
 

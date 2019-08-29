@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gray_glazed_terracotta"
+    }
+  },
+  "result": {
+    "item": "mineanddecoration:gray_glazed_terracotta_slabs",
+    "count": 6
+  }
+}

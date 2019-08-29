@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "mineanddecoration:block/green_glass_slabs" },
+        "type=top": { "model": "mineanddecoration:block/green_glass_slabs_top" },
+        "type=double": { "model": "mineanddecoration:block/green_glass" }
+    }
+}

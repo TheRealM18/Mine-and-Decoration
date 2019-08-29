@@ -53,6 +53,59 @@
 	"block.mineanddecoration.black_glazed_terracotta_stairs": "Black Gray Glazed Terracotta Stairs",
 	
 	
+	"block.mineanddecoration.glass_slabs": "Glass Slabs",
+	"block.mineanddecoration.white_glass_slabs": "White Glass Slabs",
+	"block.mineanddecoration.orange_glass_slabs": "Orange Glass Slabs",
+	"block.mineanddecoration.magenta_glass_slabs": "Magenta Glass Slabs",
+	"block.mineanddecoration.yellow_glass_slabs": "Yellow Glass Slabs",
+	"block.mineanddecoration.lime_glass_slabs": "Lime Glass Slabs",
+	"block.mineanddecoration.pink_glass_slabs": "Pink Glass Slabs",
+	"block.mineanddecoration.light_blue_glass_slabs": "Light Blue Glass Slabs",
+	"block.mineanddecoration.light_gray_glass_slabs": "Light Gray Glass Slabs",
+	"block.mineanddecoration.cyan_glass_slabs": "Cyan Glass Slabs",
+	"block.mineanddecoration.purple_glass_slabs": "Purple Gray Glass Slabs",
+	"block.mineanddecoration.brown_glass_slabs": "Brown Gray Glass Slabs",
+	"block.mineanddecoration.green_glass_slabs": "Green Gray Glass Slabs",
+	"block.mineanddecoration.blue_glass_slabs": "Blue Gray Glass Slabs",
+	"block.mineanddecoration.red_glass_slabs": "Red Gray Glass Slabs",
+	"block.mineanddecoration.black_glass_slabs": "Black Gray Glass Slabs",
+	
+	
+	"block.mineanddecoration.terracotta_slabs": "Terracotta Slabs",
+	"block.mineanddecoration.white_terracotta_slabs": "White Terracotta Slabs",
+	"block.mineanddecoration.orange_terracotta_slabs": "Orange Terracotta Slabs",
+	"block.mineanddecoration.magenta_terracotta_slabs": "Magenta Terracotta Slabs",
+	"block.mineanddecoration.yellow_terracotta_slabs": "Yellow Terracotta Slabs",
+	"block.mineanddecoration.lime_terracotta_slabs": "Lime Terracotta Slabs",
+	"block.mineanddecoration.pink_terracotta_slabs": "Pink Terracotta Slabs",
+	"block.mineanddecoration.light_blue_terracotta_slabs": "Light Blue Terracotta Slabs",
+	"block.mineanddecoration.light_gray_terracotta_slabs": "Light Gray Terracotta Slabs",
+	"block.mineanddecoration.cyan_terracotta_slabs": "Cyan Terracotta Slabs",
+	"block.mineanddecoration.purple_terracotta_slabs": "Purple Gray Terracotta Slabs",
+	"block.mineanddecoration.brown_terracotta_slabs": "Brown Gray Terracotta Slabs",
+	"block.mineanddecoration.green_terracotta_slabs": "Green Gray Terracotta Slabs",
+	"block.mineanddecoration.blue_terracotta_slabs": "Blue Gray Terracotta Slabs",
+	"block.mineanddecoration.red_terracotta_slabs": "Red Gray Terracotta Slabs",
+	"block.mineanddecoration.black_terracotta_slabs": "Black Gray Terracotta Slabs",
+	
+	
+	"block.mineanddecoration.white_glazed_terracotta_slabs": "White Glazed Terracotta Slabs",
+	"block.mineanddecoration.orange_glazed_terracotta_slabs": "Orange Glazed Terracotta Slabs",
+	"block.mineanddecoration.magenta_glazed_terracotta_slabs": "Magenta Glazed Terracotta Slabs",
+	"block.mineanddecoration.yellow_glazed_terracotta_slabs": "Yellow Glazed Terracotta Slabs",
+	"block.mineanddecoration.lime_glazed_terracotta_slabs": "Lime Glazed Terracotta Slabs",
+	"block.mineanddecoration.pink_glazed_terracotta_slabs": "Pink Glazed Terracotta Slabs",
+	"block.mineanddecoration.light_blue_glazed_terracotta_slabs": "Light Blue Glazed Terracotta Slabs",
+	"block.mineanddecoration.light_gray_glazed_terracotta_slabs": "Light Gray Glazed Terracotta Slabs",
+	"block.mineanddecoration.cyan_glazed_terracotta_slabs": "Cyan Glazed Terracotta Slabs",
+	"block.mineanddecoration.purple_glazed_terracotta_slabs": "Purple Gray Glazed Terracotta Slabs",
+	"block.mineanddecoration.brown_glazed_terracotta_slabs": "Brown Gray Glazed Terracotta Slabs",
+	"block.mineanddecoration.green_glazed_terracotta_slabs": "Green Gray Glazed Terracotta Slabs",
+	"block.mineanddecoration.blue_glazed_terracotta_slabs": "Blue Gray Glazed Terracotta Slabs",
+	"block.mineanddecoration.red_glazed_terracotta_slabs": "Red Gray Glazed Terracotta Slabs",
+	"block.mineanddecoration.black_glazed_terracotta_slabs": "Black Gray Glazed Terracotta Slabs",
+	
+	
 	"mineanddecoration.advancement.title.welcomeeveryone": "Mine and Decoration - Information",
 	"mineanddecoration.advancement.title.version": "Mod Version",
 	"mineanddecoration.advancement.title.codersroot": "Coders",
@@ -63,7 +116,7 @@
 	
 	
 	"mineanddecoration.advancement.desc.welcomeeveryone": "Welcome Mine and Slash - Expansion",
-	"mineanddecoration.advancement.desc.version": "1.0.2.2",
+	"mineanddecoration.advancement.desc.version": "1.0.3.3",
 	"mineanddecoration.advancement.desc.codersroot": "This are the developers of the mod",
 	"mineanddecoration.advancement.desc.coder1": "TheRealM18",
 	"mineanddecoration.advancement.desc.translatorsroot": "This are the translators of the mod",
@@ -71,5 +124,6 @@
 	"mineanddecoration.advancement.desc.support": "YSYMcMb",
 	
 	
-	"itemGroup.mineanddecoration_deco": "Mine and Decoration Stairs"
+	"itemGroup.mineanddecoration_stairs": "Mine and Decoration Stairs",
+	"itemGroup.mineanddecoration_slabs": "Mine and Decoration Slabs"
 }

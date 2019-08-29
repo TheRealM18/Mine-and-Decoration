@@ -1,8 +1,8 @@
 {
-    "parent": "block/stairs",
+    "parent": "block/blue_stairs",
     "textures": {
-        "bottom": "minecraft:block/blue_terracotta",
-        "top": "minecraft:block/blue_terracotta",
-        "side": "minecraft:block/blue_terracotta"
+        "bottom": "minecraft:block/blue_blue_terracotta",
+        "top": "minecraft:block/blue_blue_terracotta",
+        "side": "minecraft:block/blue_blue_terracotta"
     }
 }
