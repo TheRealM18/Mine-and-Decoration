@@ -4,15 +4,18 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Effect;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -26,8 +29,6 @@ import org.apache.logging.log4j.Logger;
 import com.therealm18.mineanddecoration.database.blocks.Slabs;
 import com.therealm18.mineanddecoration.database.blocks.Stairs;
 import com.therealm18.mineanddecoration.registry.BlockReferance;
-
-import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("mineanddecoration")
@@ -53,47 +54,52 @@ public class MAD
         }
 
     };
+
     public MAD() {
+
+        System.out.println("Starting Mine and Decoration");
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
-    }
+        
 
+        
+    }
+    
     private void setup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+    private void doClientStuff(final FMLClientSetupEvent event) 
+    {
+    	
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
-        InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+    	
     }
 
     private void processIMC(final InterModProcessEvent event)
     {
-        LOGGER.info("Got IMC {}", event.getIMCStream().
-                map(m->m.getMessageSupplier().get()).
-                collect(Collectors.toList()));
+    	
     }
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
-        LOGGER.info("HELLO from server starting");
     }
 
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
-    	
+
 
     	@SubscribeEvent
-    	public static void registerItems(RegistryEvent.Register<Item> event) {
+    	public static void registerItems(RegistryEvent.Register<Item> event) 
+    	{
+    		
     		
     		//Stairs
     		
@@ -211,9 +217,19 @@ public class MAD
     		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_GREEN_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.GREEN_GLAZED_TERRACOTTA_SLABS));
     		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_RED_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.RED_GLAZED_TERRACOTTA_SLABS));
     		event.getRegistry().register(new BlockItem(BlockReferance.BLOCK_BLACK_GLAZED_TERRACOTTA_SLABS, new Item.Properties().group(SLABS)).setRegistryName(BlockReferance.BLACK_GLAZED_TERRACOTTA_SLABS));
+
     	}
+    	
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
+    	public static void register(RegistryEvent.Register<Effect> event) 
+        {
+        	
+
+    	}
+    	
+        @SubscribeEvent
+        public static void registerBlocks(final RegistryEvent.Register<Block> event) 
+        {
         	
         	//Stairs
         	
@@ -331,7 +347,25 @@ public class MAD
         	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("green_glazed_terracotta_slabs"));
         	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("red_glazed_terracotta_slabs"));
         	event.getRegistry().register(new Slabs(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.STONE).hardnessAndResistance(5F)).setRegistryName("black_glazed_terracotta_slabs"));
+        	
+        }
+        
+        @SubscribeEvent
+        public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) 
+        {
+        	
+        }
+        
+        @SubscribeEvent
+        public static void registerContainers(final RegistryEvent.Register<ContainerType<?>> event) {
 
+        }
+        
+        @SubscribeEvent
+        public static void registerEnchantments(final RegistryEvent.Register<Enchantment> event)
+        {
+        	
         }
     }
 }
+
