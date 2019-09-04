@@ -1,8 +1,8 @@
 {
-    "parent": "block/white_slab_top",
+    "parent": "block/slab_top",
     "textures": {
-        "bottom": "minecraft:block/white_stained_glass",
-        "top": "minecraft:block/white_stained_glass",
-        "side": "minecraft:block/white_stained_glass"
+        "bottom": "block/white_stained_glass",
+        "top": "block/white_stained_glass",
+        "side": "block/white_stained_glass"
     }
 }

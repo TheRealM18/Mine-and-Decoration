@@ -1,8 +1,8 @@
 {
     "parent": "block/slab",
     "textures": {
-        "bottom": "minecraft:block/glass",
-        "top": "minecraft:block/glass",
-        "side": "minecraft:block/glass"
+        "bottom": "block/glass",
+        "top": "block/glass",
+        "side": "block/glass"
     }
 }
