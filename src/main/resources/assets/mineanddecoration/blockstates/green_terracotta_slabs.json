@@ -1,7 +1,13 @@
 {
-    "variants": {
-        "type=bottom": { "model": "mineanddecoration:block/green_terracotta_slabs" },
-        "type=top": { "model": "mineanddecoration:block/green_terracotta_slabs_top" },
-        "type=double": { "model": "mineanddecoration:block/green_terracotta" }
-    }
+	"variants": {
+		"type=bottom": {
+			"model": "mineanddecoration:block/green_terracotta_slabs"
+		},
+		"type=top": {
+			"model": "mineanddecoration:block/green_terracotta_slabs_top"
+		},
+		"type=double": {
+			"model": "minecraft:block/green_terracotta"
+		}
+	}
 }

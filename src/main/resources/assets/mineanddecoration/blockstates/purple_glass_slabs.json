@@ -1,7 +1,13 @@
 {
-    "variants": {
-        "type=bottom": { "model": "mineanddecoration:block/purple_glass_slabs" },
-        "type=top": { "model": "mineanddecoration:block/purple_glass_slabs_top" },
-        "type=double": { "model": "mineanddecoration:block/purple_glass" }
-    }
+	"variants": {
+		"type=bottom": {
+			"model": "mineanddecoration:block/purple_glass_slabs"
+		},
+		"type=top": {
+			"model": "mineanddecoration:block/purple_glass_slabs_top"
+		},
+		"type=double": {
+			"model": "minecraft:block/purple_stained_glass"
+		}
+	}
 }

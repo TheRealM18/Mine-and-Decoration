@@ -1,18 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_stairs",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:terracotta"
-    }
-  },
-  "result": {
-    "item": "mineanddecoration:terracotta_stairs",
-    "count": 4
-  }
+	"type": "minecraft:crafting_shaped",
+	"group": "wooden_stairs",
+	"pattern": [
+		"#  ",
+		"## ",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:terracotta"
+		}
+	},
+	"result": {
+		"item": "mineanddecoration:terracotta_stairs",
+		"count": 4
+	}
 }

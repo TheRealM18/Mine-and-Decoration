@@ -1,18 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_stairs",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:gray_glazed_terracotta"
-    }
-  },
-  "result": {
-    "item": "mineanddecoration:gray_glazed_terracotta_stairs",
-    "count": 4
-  }
+	"type": "minecraft:crafting_shaped",
+	"group": "wooden_stairs",
+	"pattern": [
+		"#  ",
+		"## ",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:gray_glazed_terracotta"
+		}
+	},
+	"result": {
+		"item": "mineanddecoration:gray_glazed_terracotta_stairs",
+		"count": 4
+	}
 }

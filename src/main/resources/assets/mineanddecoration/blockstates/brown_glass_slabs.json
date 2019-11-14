@@ -1,7 +1,13 @@
 {
-    "variants": {
-        "type=bottom": { "model": "mineanddecoration:block/brown_glass_slabs" },
-        "type=top": { "model": "mineanddecoration:block/brown_glass_slabs_top" },
-        "type=double": { "model": "mineanddecoration:block/brown_glass" }
-    }
+	"variants": {
+		"type=bottom": {
+			"model": "mineanddecoration:block/brown_glass_slabs"
+		},
+		"type=top": {
+			"model": "mineanddecoration:block/brown_glass_slabs_top"
+		},
+		"type=double": {
+			"model": "minecraft:block/brown_stained_glass"
+		}
+	}
 }

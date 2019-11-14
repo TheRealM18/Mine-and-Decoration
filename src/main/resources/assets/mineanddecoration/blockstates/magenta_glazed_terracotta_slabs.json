@@ -1,7 +1,13 @@
 {
-    "variants": {
-        "type=bottom": { "model": "mineanddecoration:block/magenta_glazed_terracotta_slabs" },
-        "type=top": { "model": "mineanddecoration:block/magenta_glazed_terracotta_slabs_top" },
-        "type=double": { "model": "mineanddecoration:block/magenta_glazed_terracotta" }
-    }
+	"variants": {
+		"type=bottom": {
+			"model": "mineanddecoration:block/magenta_glazed_terracotta_slabs"
+		},
+		"type=top": {
+			"model": "mineanddecoration:block/magenta_glazed_terracotta_slabs_top"
+		},
+		"type=double": {
+			"model": "minecraft:block/magenta_glazed_terracotta"
+		}
+	}
 }

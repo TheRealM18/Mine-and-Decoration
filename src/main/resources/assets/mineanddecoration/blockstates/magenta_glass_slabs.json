@@ -1,7 +1,13 @@
 {
-    "variants": {
-        "type=bottom": { "model": "mineanddecoration:block/magenta_glass_slabs" },
-        "type=top": { "model": "mineanddecoration:block/magenta_glass_slabs_top" },
-        "type=double": { "model": "mineanddecoration:block/magenta_glass" }
-    }
+	"variants": {
+		"type=bottom": {
+			"model": "mineanddecoration:block/magenta_glass_slabs"
+		},
+		"type=top": {
+			"model": "mineanddecoration:block/magenta_glass_slabs_top"
+		},
+		"type=double": {
+			"model": "minecraft:block/magenta_stained_glass"
+		}
+	}
 }

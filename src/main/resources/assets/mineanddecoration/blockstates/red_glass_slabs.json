@@ -1,7 +1,13 @@
 {
-    "variants": {
-        "type=bottom": { "model": "mineanddecoration:block/red_glass_slabs" },
-        "type=top": { "model": "mineanddecoration:block/red_glass_slabs_top" },
-        "type=double": { "model": "mineanddecoration:block/red_glass" }
-    }
+	"variants": {
+		"type=bottom": {
+			"model": "mineanddecoration:block/red_glass_slabs"
+		},
+		"type=top": {
+			"model": "mineanddecoration:block/red_glass_slabs_top"
+		},
+		"type=double": {
+			"model": "minecraft:block/red_stained_glass"
+		}
+	}
 }

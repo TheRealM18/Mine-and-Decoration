@@ -1,24 +1,26 @@
 {
-    "display": {
-        "icon": {
-            "item": "mineanddecoration:black_glass_stairs"
-        },
-        "title": {
-            "translate": "mineanddecoration.advancement.title.welcomeeveryone"
-        },
-        "description": {
-            "translate": "mineanddecoration.advancement.desc.welcomeeveryone"
-        },
-        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-        "show_toast": true,
-        "announce_to_chat": false
-    },
-    "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
-            }
-    },
-    "requirements": [
-        ["tick"]
-    ]
+	"display": {
+		"icon": {
+			"item": "mineanddecoration:black_glass_stairs"
+		},
+		"title": {
+			"translate": "mineanddecoration.advancement.title.welcomeeveryone"
+		},
+		"description": {
+			"translate": "mineanddecoration.advancement.desc.welcomeeveryone"
+		},
+		"background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"tick": {
+			"trigger": "minecraft:tick"
+		}
+	},
+	"requirements": [
+		[
+			"tick"
+		]
+	]
 }

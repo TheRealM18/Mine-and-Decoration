@@ -1,25 +1,26 @@
 {
 	"parent": "mineanddecoration:mineanddecoration/codersroot",
-	
-    "display": {
-        "icon": {
-            "item": "mineanddecoration:red_glass_stairs"
-        },
-        "title": {
-            "translate": "mineanddecoration.advancement.title.coder1"
-        },
-        "description": {
-            "translate": "mineanddecoration.advancement.desc.coder1"
-        },
-        "show_toast": true,
-        "announce_to_chat": false
-    },
-    "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
-            }
-    },
-    "requirements": [
-        ["tick"]
-    ]
+	"display": {
+		"icon": {
+			"item": "mineanddecoration:red_glass_stairs"
+		},
+		"title": {
+			"translate": "mineanddecoration.advancement.title.coder1"
+		},
+		"description": {
+			"translate": "mineanddecoration.advancement.desc.coder1"
+		},
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"tick": {
+			"trigger": "minecraft:tick"
+		}
+	},
+	"requirements": [
+		[
+			"tick"
+		]
+	]
 }
